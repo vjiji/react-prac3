@@ -1,18 +1,30 @@
-import React from 'react'
-import Buttons from 'components/buttons'
+import FeaturesContainer from "components/layout/FeaturesContainer";
+import Inputs from "components/features/Inputs";
+import styled from "styled-components";
+import Buttons from "components/buttons";
 
 function App() {
   return (
-    <Buttons
-    label = "Large Primaty Button"
-    styleClass = ""
-    onClick={() => {
-      alert("버튼을 만들어보세요")
-    }}
-    >
-
-    </Buttons>
-  )
+    <AppLayout>
+      <FeaturesContainer title="Input">
+        <Inputs />
+      </FeaturesContainer>
+      <Buttons
+        label="Large Primaty Button"
+        styleClass=""
+        onClick={() => {
+          alert("버튼을 만들어보세요");
+        }}
+      />
+    </AppLayout>
+  );
 }
 
-export default App
+export default App;
+
+const AppLayout = styled.div`
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
