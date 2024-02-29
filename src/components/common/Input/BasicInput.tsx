@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 interface InputProps {
   title: string;
+  value: string;
+  onChange: (e: any) => void;
 }
 
-const BasicInput = ({ title }: InputProps) => {
+const BasicInput = ({ title, value, onChange }: InputProps) => {
   return (
     <InputLayout>
       <p>{title}</p>
-      <InputStyles />
+      <InputStyles value={value} onChange={onChange} />
     </InputLayout>
   );
 };
