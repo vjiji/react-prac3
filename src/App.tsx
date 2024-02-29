@@ -1,6 +1,7 @@
 import FeaturesContainer from "components/layout/FeaturesContainer";
 import Inputs from "components/features/Inputs";
 import styled from "styled-components";
+import Buttons from "components/buttons";
 
 function App() {
   return (
@@ -8,6 +9,13 @@ function App() {
       <FeaturesContainer title="Input">
         <Inputs />
       </FeaturesContainer>
+      <Buttons
+        label="Large Primaty Button"
+        styleClass=""
+        onClick={() => {
+          alert("버튼을 만들어보세요");
+        }}
+      />
     </AppLayout>
   );
 }
