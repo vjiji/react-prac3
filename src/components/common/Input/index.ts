@@ -1,3 +1,4 @@
 import BasicInput from "./BasicInput";
+import PriceInput from "./PriceInput";
 
-export { BasicInput };
+export { BasicInput, PriceInput };

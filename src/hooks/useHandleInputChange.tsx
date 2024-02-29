@@ -10,7 +10,6 @@ const useHandleInputChange = (
   setValue: React.Dispatch<React.SetStateAction<string>>
 ) => {
   const handleInputChange = (e: any) => {
-    console.log(typeof e.currentTarget.value);
     setValue(e.currentTarget.value);
   };
   return { value, handleInputChange };

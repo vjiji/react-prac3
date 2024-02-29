@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-interface InputProps {
+export interface BasicInputProps {
   title: string;
   value: string;
   onChange: (e: any) => void;
+  type?: string;
 }
 
-const BasicInput = ({ title, value, onChange }: InputProps) => {
+const BasicInput = ({ title, value, onChange, type }: BasicInputProps) => {
   return (
     <InputLayout>
       <p>{title}</p>
