@@ -1,12 +1,18 @@
-import "./App.css";
-import Test from "./Test";
+import React from 'react'
+import Buttons from 'components/buttons'
 
 function App() {
   return (
-    <div className="App">
-      <Test />
-    </div>
-  );
+    <Buttons
+    label = "Large Primaty Button"
+    styleClass = ""
+    onClick={() => {
+      alert("버튼을 만들어보세요")
+    }}
+    >
+
+    </Buttons>
+  )
 }
 
-export default App;
+export default App
