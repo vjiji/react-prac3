@@ -1,17 +1,16 @@
 import { BasicInput, PriceInput } from "components/common/Input";
-import useHandleInputChange from "hooks/useHandleInputChange";
 import { useState } from "react";
 import styled from "styled-components";
+import useInputs from "./useInputs";
 
 const Inputs = () => {
-  const [text, setText] = useState("");
-  const [price, setPrice] = useState("0");
-
-  const { value: textValue, handleInputChange: handleTextInputChange } =
-    useHandleInputChange(text, setText);
-
-  const { value: priceValue, handleInputChange: handlePriceInputChange } =
-    useHandleInputChange(price, setPrice);
+  const {
+    textValue,
+    priceValue,
+    handleTextInputChange,
+    handlePriceInputChange,
+    handleButtonClick,
+  } = useInputs();
 
   return (
     <InputsLayout>
@@ -25,7 +24,7 @@ const Inputs = () => {
         value={priceValue}
         onChange={handlePriceInputChange}
       />
-      <button>저장</button>
+      <button onClick={handleButtonClick}>저장</button>
     </InputsLayout>
   );
 };
