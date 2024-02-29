@@ -12,9 +12,7 @@ const PriceInput = ({ title, value, onChange }: PriceInputProps) => {
       ? formatPriceWithComma(commafilteredValue)
       : value.slice(0, value.length - 1);
 
-  return (
-    <BasicInput title={title} value={value} onChange={onChange} type="number" />
-  );
+  return <BasicInput title={title} value={value} onChange={onChange} />;
 };
 
 export default PriceInput;

@@ -1,15 +1,16 @@
-import useHandleInputChange from "hooks/useHandleInputChange";
-import { MouseEventHandler, useState } from "react";
+import { ChangeEvent, MouseEventHandler, useState } from "react";
 
 const useInputs = () => {
   const [text, setText] = useState("");
   const [price, setPrice] = useState("0");
 
-  const { value: textValue, handleInputChange: handleTextInputChange } =
-    useHandleInputChange(text, setText);
+  const handleTextInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setText(e.currentTarget.value);
+  };
 
-  const { value: priceValue, handleInputChange: handlePriceInputChange } =
-    useHandleInputChange(price, setPrice);
+  const handlePriceInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setPrice(e.currentTarget.value);
+  };
 
   const handleButtonClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     if (!(text && price)) {
@@ -20,8 +21,8 @@ const useInputs = () => {
   };
 
   return {
-    textValue,
-    priceValue,
+    text,
+    price,
     handleTextInputChange,
     handlePriceInputChange,
     handleButtonClick,

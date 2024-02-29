@@ -1,13 +1,13 @@
+import { ChangeEvent } from "react";
 import styled from "styled-components";
 
 export interface BasicInputProps {
   title: string;
   value: string;
-  onChange: (e: any) => void;
-  type?: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const BasicInput = ({ title, value, onChange, type }: BasicInputProps) => {
+const BasicInput = ({ title, value, onChange }: BasicInputProps) => {
   return (
     <InputLayout>
       <p>{title}</p>
