@@ -1,7 +1,8 @@
-import FeaturesContainer from "components/layout/FeaturesContainer";
-import Inputs from "components/features/Inputs";
 import styled from "styled-components";
+import FeaturesContainer from "components/layout/FeaturesContainer";
 import ButtonSection from "components/button/ButtonSection";
+import Inputs from "components/features/Inputs";
+import Modals from "components/features/Modals";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </FeaturesContainer>
       <FeaturesContainer title="Input">
         <Inputs />
+      </FeaturesContainer>
+      <FeaturesContainer title="Modal">
+        <Modals />
       </FeaturesContainer>
     </AppLayout>
   );
