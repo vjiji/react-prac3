@@ -1,7 +1,8 @@
-import FeaturesContainer from "components/layout/FeaturesContainer";
-import Inputs from "components/features/Inputs";
 import styled from "styled-components";
+import FeaturesContainer from "components/layout/FeaturesContainer";
 import ButtonSection from "components/button/ButtonSection";
+import Inputs from "components/features/Inputs";
+import Modals from "components/features/Modals";
 import SelectSection from "components/selete/selectSection";
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
       </FeaturesContainer>
       <FeaturesContainer title="Input">
         <Inputs />
+      </FeaturesContainer>
+      <FeaturesContainer title="Modal">
+        <Modals />
       </FeaturesContainer>
       <FeaturesContainer title="Select">
         <SelectSection />
@@ -27,5 +31,4 @@ const AppLayout = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
-
 `;

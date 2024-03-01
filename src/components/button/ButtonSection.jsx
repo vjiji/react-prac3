@@ -1,9 +1,8 @@
 import React from "react";
-import {Button, BtnLayout} from "./Button";
+import { Button, BtnLayout } from "./Button";
 import styled from "styled-components";
 import { MdArrowForwardIos } from "react-icons/md";
 import { FaBell } from "react-icons/fa";
-
 
 function ButtonSection() {
   const handleAlert = () => {
@@ -17,21 +16,13 @@ function ButtonSection() {
   return (
     <>
       <BtnLayout>
-        <Button
-          type="large"
-          onClickFnc={handleAlert}
-          stroke= "true"
-          bold= "true">
+        <Button type="large" onClickFnc={handleAlert} stroke="true" bold="true">
           Large Primary Button <MdArrowForwardIos />
         </Button>
-        <Button
-          type="medium"
-          theme = "mint">
+        <Button type="medium" theme="mint">
           Medium
         </Button>
-        <Button
-          type="small"
-          theme = "mint">
+        <Button type="small" theme="mint">
           Small
         </Button>
       </BtnLayout>
@@ -39,27 +30,21 @@ function ButtonSection() {
         <Button
           type="large"
           onClickFnc={handlePrompt}
-          stroke= "false"
-          bold= "true"
-          fontco= "red">
+          stroke="false"
+          bold="true"
+          fontco="red"
+        >
           Large Negative Button <FaBell />
         </Button>
-        <Button
-          type="medium"
-          theme = "coral"
-          fontco= "red">
+        <Button type="medium" theme="coral" fontco="red">
           Medium
         </Button>
-        <Button
-          type="small"
-          theme = "coral"
-          fontco= "red">
+        <Button type="small" theme="coral" fontco="red">
           Small
         </Button>
       </BtnLayout>
     </>
   );
 }
-
 
 export default ButtonSection;
