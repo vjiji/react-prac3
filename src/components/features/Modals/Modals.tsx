@@ -37,11 +37,16 @@ const Modals = () => {
             <Button
               type="small"
               theme="coral"
+              fontco="red"
               onClickFnc={handleLeftModalClick}
             >
               닫기
             </Button>
-            <Button type="small" theme="mint" onClickFnc={handleLeftModalClick}>
+            <Button
+              type="small"
+              theme="mint"
+              onClickFnc={() => console.log("on!")}
+            >
               확인
             </Button>
           </ButtonBoxInModal>
@@ -98,7 +103,7 @@ const ButtonInRightModal = styled.div`
   width: 40px;
   height: 40px;
   background: #eee;
-  border: 1px solid #333;
+  border: 1px solid #ddd;
   border-radius: 25px;
   cursor: pointer;
 
