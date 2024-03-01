@@ -2,6 +2,7 @@ import FeaturesContainer from "components/layout/FeaturesContainer";
 import Inputs from "components/features/Inputs";
 import styled from "styled-components";
 import ButtonSection from "components/button/ButtonSection";
+import SelectSection from "components/selete/selectSection";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </FeaturesContainer>
       <FeaturesContainer title="Input">
         <Inputs />
+      </FeaturesContainer>
+      <FeaturesContainer title="Select">
+        <SelectSection />
       </FeaturesContainer>
     </AppLayout>
   );
@@ -23,4 +27,5 @@ const AppLayout = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+
 `;
