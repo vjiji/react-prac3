@@ -1,21 +1,17 @@
 import FeaturesContainer from "components/layout/FeaturesContainer";
 import Inputs from "components/features/Inputs";
 import styled from "styled-components";
-import Buttons from "components/buttons";
+import ButtonSection from "components/button/ButtonSection";
 
 function App() {
   return (
     <AppLayout>
+      <FeaturesContainer title="Button">
+        <ButtonSection />
+      </FeaturesContainer>
       <FeaturesContainer title="Input">
         <Inputs />
       </FeaturesContainer>
-      <Buttons
-        label="Large Primaty Button"
-        styleClass=""
-        onClick={() => {
-          alert("버튼을 만들어보세요");
-        }}
-      />
     </AppLayout>
   );
 }
