@@ -1,41 +1,25 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 interface ModalProps {
+  children: ReactNode;
   isOpen: boolean;
-  setModalClose: () => void;
 }
 
-const Modal = ({ isOpen, setModalClose }: ModalProps) => {
-  if (!isOpen) {
-    return null;
-  }
-  console.log(isOpen);
-  return (
-    <ModalBackground>
-      <ModalStyles>
-        <button onClick={setModalClose}>닫기</button>
-      </ModalStyles>
-    </ModalBackground>
-  );
+const Modal = ({ isOpen, children }: ModalProps) => {
+  return <>{isOpen && <ModalBackgrounds>{children}</ModalBackgrounds>}</>;
 };
 
 export default Modal;
 
-const ModalBackground = styled.div`
+const ModalBackgrounds = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background: #000;
-  opacity: 0.5;
+  background: rgb(221, 221, 221, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const ModalStyles = styled.div`
-  width: 50%;
-  height: 50%;
-  background-color: #fff;
 `;
