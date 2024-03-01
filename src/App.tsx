@@ -3,6 +3,7 @@ import FeaturesContainer from "components/layout/FeaturesContainer";
 import ButtonSection from "components/button/ButtonSection";
 import Inputs from "components/features/Inputs";
 import Modals from "components/features/Modals";
+import SelectSection from "components/selete/selectSection";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       </FeaturesContainer>
       <FeaturesContainer title="Modal">
         <Modals />
+      </FeaturesContainer>
+      <FeaturesContainer title="Select">
+        <SelectSection />
       </FeaturesContainer>
     </AppLayout>
   );
