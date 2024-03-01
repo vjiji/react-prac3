@@ -1,5 +1,6 @@
-import { BasicInput, PriceInput } from "components/common/Input";
 import styled from "styled-components";
+import { BasicInput, PriceInput } from "components/common/Input";
+import { Button } from "components/button/Button";
 import useInputs from "./useInputs";
 
 const Inputs = () => {
@@ -19,7 +20,9 @@ const Inputs = () => {
         value={price}
         onChange={handlePriceInputChange}
       />
-      <button onClick={handleButtonClick}>저장</button>
+      <Button type="small" theme="mint" onClickFnc={handleButtonClick}>
+        저장
+      </Button>
     </InputsLayout>
   );
 };
