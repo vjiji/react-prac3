@@ -15,17 +15,17 @@ const Modals = () => {
     setIsRightModalOpen,
   } = useModals();
 
-  const handleLeftModalClick = () => setIsLeftModalOpen(!isLeftModalOpen);
+  const handleLeftModalOpen = () => setIsLeftModalOpen(!isLeftModalOpen);
 
-  const handleRightModalClick = () => setIsRightModalOpen(!isRightModalOpen);
+  const handleRightModalOpen = () => setIsRightModalOpen(!isRightModalOpen);
 
   return (
     <>
       <ButtonBox>
-        <Button onClickFnc={handleLeftModalClick} {...leftModalButtonProps}>
+        <Button onClickFnc={handleLeftModalOpen} {...leftModalButtonProps}>
           open modal
         </Button>
-        <Button onClickFnc={handleRightModalClick} {...rightModalButtonProps}>
+        <Button onClickFnc={handleRightModalOpen} {...rightModalButtonProps}>
           open modal
         </Button>
       </ButtonBox>
@@ -38,7 +38,7 @@ const Modals = () => {
               type="small"
               theme="coral"
               fontco="red"
-              onClickFnc={handleLeftModalClick}
+              onClickFnc={handleLeftModalOpen}
             >
               닫기
             </Button>
@@ -52,10 +52,10 @@ const Modals = () => {
           </ButtonBoxInModal>
         </LeftModalStyles>
       </Modal>
-      <Modal isOpen={isRightModalOpen} handleClose={handleRightModalClick}>
+      <Modal isOpen={isRightModalOpen} handleClose={handleRightModalOpen}>
         <RightModalStyles>
           <p>{rightButtonText}</p>
-          <ButtonInRightModal onClick={handleRightModalClick}>
+          <ButtonInRightModal onClick={handleRightModalOpen}>
             X
           </ButtonInRightModal>
         </RightModalStyles>
