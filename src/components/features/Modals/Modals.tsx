@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import { Button } from "components/button/Button";
 import { Modal } from "components/common/Modal";
-import styled from "styled-components";
 import useModals from "./useModals";
 
 const Modals = () => {
@@ -47,7 +47,7 @@ const Modals = () => {
           </ButtonBoxInModal>
         </LeftModalStyles>
       </Modal>
-      <Modal isOpen={isRightModalOpen}>
+      <Modal isOpen={isRightModalOpen} handleClose={handleRightModalClick}>
         <RightModalStyles>
           <p>{rightButtonText}</p>
           <ButtonInRightModal onClick={handleRightModalClick}>
@@ -75,6 +75,7 @@ const LeftModalStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 2;
 `;
 
 const ButtonBoxInModal = styled.div`
