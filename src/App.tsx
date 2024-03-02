@@ -17,7 +17,7 @@ function App() {
       <FeaturesContainer title="Modal">
         <Modals />
       </FeaturesContainer>
-      <FeaturesContainer title="Select">
+      <FeaturesContainer title="Select" outlined>
         <SelectSection />
       </FeaturesContainer>
     </AppLayout>

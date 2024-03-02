@@ -6,7 +6,6 @@ const ButtonContainer = styled.div`
   flex-direction: row; /* 가로로 배치 */
   align-items: flex-start;
   margin-bottom: 10px;
-  z-index: 0;
 `;
 
 const Button = styled.button`
@@ -39,7 +38,7 @@ const List = styled.ul`
 
 const ListContainer = styled.div`
   border-radius: 12px;
-  border: 1px solid rgb(221, 221, 221);
+  ${({ show }) => show && "border: 1px solid rgb(221, 221, 221);"}
   overflow: hidden;
   background-color: white;
 `;
@@ -71,11 +70,10 @@ const StyledButton = styled(Button)`
 const Select = (props) => {
   const [selectBtn, setSelectBtn] = useState("리액트");
   const selectList = ["리액트", "자바", "스프링", "리액트네이티브"];
-  
 
   const clickHandler = (item) => {
     setSelectBtn(item);
-    props.setShowOptions(false)
+    props.setShowOptions(false);
   };
 
   return (
@@ -85,7 +83,7 @@ const Select = (props) => {
           {selectBtn} <DropdownIcon>▼</DropdownIcon>
         </StyledButton>
       </ButtonContainer>
-      <ListContainer>
+      <ListContainer show={props.show}>
         <List show={props.show}>
           {selectList.map((item, index) => (
             <ListItem key={index}>
