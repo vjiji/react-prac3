@@ -1,5 +1,5 @@
 import BasicInput, { BasicInputProps } from "./BasicInput";
-import { formatPriceWithComma } from "components/utils/formatPriceWuthComma";
+import { formatPriceWithComma } from "utils/formatPriceWuthComma";
 
 interface PriceInputProps extends BasicInputProps {}
 
