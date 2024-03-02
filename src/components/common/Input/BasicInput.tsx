@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, memo } from "react";
 import styled from "styled-components";
 
 export interface BasicInputProps {
@@ -7,14 +7,14 @@ export interface BasicInputProps {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const BasicInput = ({ title, value, onChange }: BasicInputProps) => {
+const BasicInput = memo(({ title, value, onChange }: BasicInputProps) => {
   return (
     <InputLayout>
       <p>{title}</p>
       <InputStyles value={value} onChange={onChange} />
     </InputLayout>
   );
-};
+});
 
 export default BasicInput;
 
