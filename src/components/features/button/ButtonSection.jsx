@@ -1,6 +1,6 @@
-import { Button, BtnLayout } from "./Button";
 import { MdArrowForwardIos } from "react-icons/md";
 import { FaBell } from "react-icons/fa";
+import { BtnLayout, Button } from "components/common/Button";
 
 function ButtonSection() {
   const handleAlert = () => {

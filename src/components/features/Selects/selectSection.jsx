@@ -1,6 +1,6 @@
+import Select from "components/common/Select";
 import React, { useState } from "react";
 import styled from "styled-components";
-import Select from "./Select";
 
 const Container = styled.div`
   display: flex;
