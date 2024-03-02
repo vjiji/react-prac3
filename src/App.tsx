@@ -30,5 +30,5 @@ const AppLayout = styled.div`
   padding: 30px 10px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 `;
