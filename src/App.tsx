@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import FeaturesContainer from "components/layout/FeaturesContainer";
-import ButtonSection from "components/button/ButtonSection";
+import ButtonSection from "components/features/button/ButtonSection";
 import Inputs from "components/features/Inputs";
 import Modals from "components/features/Modals";
-import SelectSection from "components/selete/selectSection";
+import SelectSection from "components/features/selete/selectSection";
 
 function App() {
   return (

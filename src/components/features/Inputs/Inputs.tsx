@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BasicInput, PriceInput } from "components/common/Input";
-import { Button } from "components/button/Button";
+import { Button } from "components/features/button/Button";
 import useInputs from "./useInputs";
 
 const Inputs = () => {

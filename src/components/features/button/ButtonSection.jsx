@@ -1,6 +1,4 @@
-import React from "react";
 import { Button, BtnLayout } from "./Button";
-import styled from "styled-components";
 import { MdArrowForwardIos } from "react-icons/md";
 import { FaBell } from "react-icons/fa";
 

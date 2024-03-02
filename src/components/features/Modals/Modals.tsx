@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "components/button/Button";
+import { Button } from "components/features/button/Button";
 import { Modal } from "components/common/Modal";
 import useModals from "./useModals";
 

@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row; /* 가로로 배치 */
   align-items: flex-start;
   margin-bottom: 10px;
+  z-index: 0;
 `;
 
 const Button = styled.button`
+  background-color: white;
   position: relative;
   width: 300px;
   height: 40px;
   padding: 0px 28px;
-  background: none;
   cursor: pointer;
   text-align: left; /* 텍스트를 왼쪽 정렬 */
   border: 1px solid rgb(221, 221, 221);
@@ -31,7 +32,7 @@ const DropdownIcon = styled.span`
 `;
 
 const List = styled.ul`
-  display: ${props => props.show ? 'flex' : 'none'};
+  display: ${(props) => (props.show ? "flex" : "none")};
   flex-direction: column;
   margin-top: 5px;
 `;
@@ -40,10 +41,12 @@ const ListContainer = styled.div`
   border-radius: 12px;
   border: 1px solid rgb(221, 221, 221);
   overflow: hidden;
+  background-color: white;
 `;
 
 const ListItem = styled.li`
   margin-bottom: 5px;
+  z-index: 2;
 `;
 
 const OptionButton = styled.button`
@@ -66,15 +69,14 @@ const StyledButton = styled(Button)`
 `;
 
 const Select = (props) => {
-  const [selectBtn, setSelectBtn] = useState('리액트');
+  const [selectBtn, setSelectBtn] = useState("리액트");
   const selectList = ["리액트", "자바", "스프링", "리액트네이티브"];
+  
 
   const clickHandler = (item) => {
     setSelectBtn(item);
-    if (typeof props.onClick === 'function') {
-      props.onClick(item);
-    }
-  }
+    props.setShowOptions(false)
+  };
 
   return (
     <div>
@@ -87,13 +89,15 @@ const Select = (props) => {
         <List show={props.show}>
           {selectList.map((item, index) => (
             <ListItem key={index}>
-              <OptionButton onClick={() => clickHandler(item)}>{item}</OptionButton>
+              <OptionButton onClick={() => clickHandler(item)}>
+                {item}
+              </OptionButton>
             </ListItem>
           ))}
         </List>
       </ListContainer>
     </div>
   );
-}
+};
 
 export default Select;
