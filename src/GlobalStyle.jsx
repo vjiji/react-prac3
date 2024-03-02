@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import reset from 'styled-reset'
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -7,6 +6,6 @@ const GlobalStyle = createGlobalStyle`
   --color-coral: #fab1a0;
   --color-red: #d63031;
   }
-`
+`;
 
 export default GlobalStyle;

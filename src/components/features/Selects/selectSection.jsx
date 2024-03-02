@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Select from './Select';
+import Select from "components/common/Select";
+import { useState } from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
   flex-direction: row; /* 가로로 배치 */
   align-items: flex-start;
+  gap: 10px;
   margin-bottom: 10px;
-  height: 150px;
+  height: 120px;
   margin-bottom: 10px;
-  ${({isHidden}) => isHidden && 'overflow : hidden;'}
+  ${({ $isHidden }) => $isHidden && "overflow : hidden;"}
 `;
 
 const SelectSection = () => {
   const [showOptions1, setShowOptions1] = useState(false);
   const [showOptions2, setShowOptions2] = useState(false);
-  const [isHidden, setIsHidden] = useState(false)
+  const [isHidden, setIsHidden] = useState(false);
 
   const toggleOptions1 = () => {
     if (showOptions2) setShowOptions2(false);
@@ -38,21 +39,21 @@ const SelectSection = () => {
   };
 
   return (
-    <Container isHidden={isHidden}>
-      <Select 
-        show={showOptions1} 
-        showOptions={toggleOptions1} 
+    <Container $isHidden={isHidden}>
+      <Select
+        show={showOptions1}
+        showOptions={toggleOptions1}
         onClick={handleOptionClick1}
         setShowOptions={setShowOptions1}
-        />
-      <Select 
-        show={showOptions2} 
-        showOptions={toggleOptions2} 
-        onClick={handleOptionClick2} 
+      />
+      <Select
+        show={showOptions2}
+        showOptions={toggleOptions2}
+        onClick={handleOptionClick2}
         setShowOptions={setShowOptions2}
       />
     </Container>
   );
-}
+};
 
 export default SelectSection;
