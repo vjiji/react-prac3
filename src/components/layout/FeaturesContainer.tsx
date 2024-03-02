@@ -4,18 +4,27 @@ import styled from "styled-components";
 interface FeaturesContainerProps {
   title: string;
   children: ReactNode;
+  outlined?: boolean;
 }
 
-const FeaturesContainer = ({ title, children }: FeaturesContainerProps) => {
+const FeaturesContainer = ({
+  children,
+  title,
+  outlined,
+}: FeaturesContainerProps) => {
   return (
-    <div>
+    <Layout outlined={outlined}>
       <Paragragh>{title}</Paragragh>
       {children}
-    </div>
+    </Layout>
   );
 };
 
 export default FeaturesContainer;
+
+const Layout = styled.div<{ outlined?: boolean }>`
+  ${({ outlined }) => outlined && `border: 3px solid gray; padding-top: 20px`}
+`;
 
 const Paragragh = styled.p`
   margin-bottom: 20px;
