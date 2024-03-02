@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { css } from "styled-components";
 
 const BtnLayout = styled.div`
@@ -13,19 +12,21 @@ const ButtonStyle = styled.button`
     switch (type) {
       case "large":
         return css`
-        width: 200px;
-        height: 50px;
+          width: 200px;
+          height: 50px;
         `;
       case "medium":
         return css`
-        width: 130px;
-        height: 45px;
+          width: 130px;
+          height: 45px;
         `;
       case "small":
         return css`
-        width: 100px;
-        height: 40px;
+          width: 100px;
+          height: 40px;
         `;
+      default:
+        return;
     }
   }};
 
@@ -35,7 +36,8 @@ const ButtonStyle = styled.button`
         return "var(--color-mint)";
       case "coral":
         return "var(--color-coral)";
-      default: return "white";
+      default:
+        return "white";
     }
   }};
 
@@ -62,20 +64,19 @@ const ButtonStyle = styled.button`
   color: ${({ fontco }) => {
     switch (fontco) {
       case "red":
-        return "var(--color-red)"
+        return "var(--color-red)";
       default:
-        return "black"
+        return "black";
     }
   }};
 
-border-radius: 8px;
-padding: 1px 6px;
-cursor: pointer;
-&:active{
-  opacity: .7;
-}
+  border-radius: 8px;
+  padding: 1px 6px;
+  cursor: pointer;
+  &:active {
+    opacity: 0.7;
+  }
 `;
-
 
 function Button({ children, onClickFnc, ...props }) {
   return (
@@ -84,4 +85,4 @@ function Button({ children, onClickFnc, ...props }) {
     </ButtonStyle>
   );
 }
-export {Button, BtnLayout};
+export { Button, BtnLayout };

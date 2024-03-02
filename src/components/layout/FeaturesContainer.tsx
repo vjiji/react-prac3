@@ -13,7 +13,7 @@ const FeaturesContainer = ({
   outlined,
 }: FeaturesContainerProps) => {
   return (
-    <Layout outlined={outlined}>
+    <Layout $outlined={outlined}>
       <Paragragh>{title}</Paragragh>
       {children}
     </Layout>
@@ -22,8 +22,8 @@ const FeaturesContainer = ({
 
 export default FeaturesContainer;
 
-const Layout = styled.div<{ outlined?: boolean }>`
-  ${({ outlined }) => outlined && `border: 4px solid #ddd; padding-top: 20px`}
+const Layout = styled.div<{ $outlined?: boolean }>`
+  ${({ $outlined }) => $outlined && `border: 4px solid #ddd; padding-top: 20px`}
 `;
 
 const Paragragh = styled.p`

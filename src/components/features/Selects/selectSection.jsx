@@ -1,5 +1,5 @@
 import Select from "components/common/Select";
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
   margin-bottom: 10px;
   height: 120px;
   margin-bottom: 10px;
-  ${({ isHidden }) => isHidden && "overflow : hidden;"}
+  ${({ $isHidden }) => $isHidden && "overflow : hidden;"}
 `;
 
 const SelectSection = () => {
@@ -39,7 +39,7 @@ const SelectSection = () => {
   };
 
   return (
-    <Container isHidden={isHidden}>
+    <Container $isHidden={isHidden}>
       <Select
         show={showOptions1}
         showOptions={toggleOptions1}
